@@ -1,0 +1,56 @@
+service: user-profile-app
+
+frameworkVersion: '2'
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  lambdaHashingVersion: 20201221
+  stage: ${opt:stage, 'dev'}
+  region: ${opt:region, 'us-east-1'}
+  environment:
+    LOG_ENVIRONMENT: ${file(./serverless.env.yml):${opt:envrt}.LOGGER_ROOT_LEVEL}
+    PATH_RESOURCES: /v1/puj/allinone
+    RDS_HOST: 'pujlab-1.caf5pk0j6q5i.us-east-1.rds.amazonaws.com'
+    RDS_USER: 'admin'
+    RDS_PASSWD: 'secret99'
+    RDS_PORT: '3306'
+    RDS_DATABASE: 'pujlab-1'
+    RDS_DEBUG: true
+
+functions:
+  addUserProfile:
+    handler: handler.manageUserProfile
+    events:
+      - http:
+          path: ${self:provider.environment.PATH_RESOURCES}/addUserProfile
+          method: post
+    memorySize: 128
+  removeUserProfile:
+    handler: handler.manageUserProfile
+    events:
+      - http:
+          path: ${self:provider.environment.PATH_RESOURCES}/removeUserProfile
+          method: post
+    memorySize: 128
+  updateUserProfile:
+    handler: handler.manageUserProfile
+    events:
+      - http:
+          path: ${self:provider.environment.PATH_RESOURCES}/updateUserProfile
+          method: post
+    memorySize: 128
+  getUserProfile:
+    handler: handler.getUserProfile
+    events:
+      - http:
+          path: ${self:provider.environment.PATH_RESOURCES}/getUserProfile/{username}
+          method: get
+    memorySize: 128            
+  getAllUserProfile:
+    handler: handler.getAllUserProfile
+    events:
+      - http:
+          path: ${self:provider.environment.PATH_RESOURCES}/getAllUserProfile
+          method: get
+    memorySize: 128    

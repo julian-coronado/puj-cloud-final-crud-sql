@@ -1,0 +1,39 @@
+{
+  "name": "user-profile-app",
+  "version": "1.0.0",
+  "description": "proyecto para gestionar las operaciones crud del perfil del usuario",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/julian-coronado/puj-cloud-final-crud-sql.git"
+  },
+  "keywords": [
+    "aws",
+    "lambda",
+    "serverless",
+    "mysql",
+    "rds",
+    "auroradb"
+  ],
+  "author": "Julian Coronado, Felipe Salazar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/julian-coronado/puj-cloud-final-crud-sql/issues"
+  },
+  "homepage": "https://github.com/julian-coronado/puj-cloud-final-crud-sql#readme",
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "mocha": "^9.1.3",
+    "nyc": "^15.1.0",
+    "serverless": "^2.65.0",
+    "sinon": "^12.0.1",
+    "standard": "^16.0.4"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.1023.0",
+    "mysql": "^2.18.1"
+  }
+}
