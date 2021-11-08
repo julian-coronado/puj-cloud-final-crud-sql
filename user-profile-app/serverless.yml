@@ -12,8 +12,8 @@ provider:
     LOG_ENVIRONMENT: ${file(./serverless.env.yml):${opt:envrt}.LOGGER_ROOT_LEVEL}
     PATH_RESOURCES: /v1/puj/allinone
     RDS_HOST: 'pujlab-database-1.caf5pk0j6q5i.us-east-1.rds.amazonaws.com'
-    RDS_USER: 'admin'
-    RDS_PASSWD: 'secret99'
+    RDS_USER: 'xxx'
+    RDS_PASSWD: 'zyx'
     RDS_PORT: '3306'
     RDS_DATABASE: 'allinone'
     RDS_DEBUG: true
