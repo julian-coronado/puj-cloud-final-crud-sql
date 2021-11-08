@@ -1,6 +1,6 @@
 {
     "resource": "/v1/puj/allinone/addItem",
-    "path": "/v1/puj/allinone/addItem",
+    "path": "/v1/puj/allinone/removeUserProfile",
     "httpMethod": "POST",
     "headers": {
         "Accept": "*/*",
@@ -84,7 +84,9 @@
     },
     "queryStringParameters": null,
     "multiValueQueryStringParameters": null,
-    "pathParameters": null,
+    "pathParameters": {
+		"username": "jcoronado1"
+		},
     "stageVariables": null,
     "requestContext": {
         "resourceId": "v0rglt",
@@ -116,6 +118,6 @@
         "domainName": "6u7y01erxg.execute-api.us-east-1.amazonaws.com",
         "apiId": "6u7y01erxg"
     },
-    "body": "{\r\n    \"username\": \"jcoronado1\",\r\n  \"email\": \"jcoronado1@sad.com\"  \r\n}",
+    "body": "{\r\n    \"username\": \"jcoronado3\",\r\n  \"email\": \"jcoronado1@sad.com\"  \r\n}",
     "isBase64Encoded": false
 }

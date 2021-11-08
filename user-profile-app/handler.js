@@ -75,9 +75,9 @@ module.exports.getAllUserProfile = async (event, context) => {
 
 module.exports.getUserProfile = async (event, context) => {
   try {
-   console.log(`${process.env.LOG_ENVIRONMENT} -> init get all items... ${JSON.stringify(event)}`)
+   console.log(`${process.env.LOG_ENVIRONMENT} -> init get user profile... ${JSON.stringify(event)}`)
 
-    const datos = await inqUserCtrl.getUser(event.pathParameters)
+    const datos = await inqUserCtrl.getUser(event.pathParameters.username)
     return sendResponse(constantes.SUCESSFULL_EXECUTION, JSON.stringify(datos))
   } catch (error) {
     console.error(error)

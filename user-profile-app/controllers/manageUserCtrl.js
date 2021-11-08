@@ -29,7 +29,7 @@ async function removeUser(data) {
 
     console.log(`${process.env.LOG_ENVIRONMENT} -> init add user... ${JSON.stringify(data)}`)
     try {
-        if (data.username && constantes.ALPHANUMERIC_REGEX.test(data.username) && data.email && constantes.EMAIL_REGEX.test(data.email)) {
+        if (data.username && constantes.ALPHANUMERIC_REGEX.test(data.username)) {
 
             const sql = 'DELETE FROM user_profile WHERE username = ?';
 

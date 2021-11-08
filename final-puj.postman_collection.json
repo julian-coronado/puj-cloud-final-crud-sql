@@ -1,0 +1,308 @@
+{
+	"info": {
+		"_postman_id": "3c3a7cff-accf-4b96-bca7-e979bef4c265",
+		"name": "final-puj",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "dynamoDB",
+			"item": [
+				{
+					"name": "get-all-shopping-car-items",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://6u7y01erxg.execute-api.us-east-1.amazonaws.com/dev/v1/puj/allinone/getAllItems",
+							"protocol": "https",
+							"host": [
+								"6u7y01erxg",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"v1",
+								"puj",
+								"allinone",
+								"getAllItems"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add-item-to-shopping-car",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_profile\": \"jcoronado\",\r\n    \"item\": {\r\n        \"itemId\": \"423-ABC-XYZ-33\",\r\n        \"value\": 100,\r\n        \"qty\": 3\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://6u7y01erxg.execute-api.us-east-1.amazonaws.com/dev/v1/puj/allinone/addItem",
+							"protocol": "https",
+							"host": [
+								"6u7y01erxg",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"v1",
+								"puj",
+								"allinone",
+								"addItem"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "remove-Item-from-shopping-car",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_profile\": \"jcoronado\",\r\n    \"item\": {\r\n        \"itemId\": \"923-ABC-XYZ-33\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://6u7y01erxg.execute-api.us-east-1.amazonaws.com/dev/v1/puj/allinone/removeItem",
+							"protocol": "https",
+							"host": [
+								"6u7y01erxg",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"v1",
+								"puj",
+								"allinone",
+								"removeItem"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-Item-from-shopping-car",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_profile\": \"jcoronado\",\r\n    \"item\": {\r\n        \"itemId\": \"423-ABC-XYZ-33\",\r\n        \"value\": 666,\r\n        \"qty\": 16\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://6u7y01erxg.execute-api.us-east-1.amazonaws.com/dev/v1/puj/allinone/updateItem",
+							"protocol": "https",
+							"host": [
+								"6u7y01erxg",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"v1",
+								"puj",
+								"allinone",
+								"updateItem"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MySql",
+			"item": [
+				{
+					"name": "add-user-profile",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"jcoronadogpuj\",\r\n    \"email\": \"jcoronadojaveriana@cali.edu.co\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://loevlocene.execute-api.us-east-1.amazonaws.com/dev/v1/puj/allinone/addUserProfile",
+							"protocol": "https",
+							"host": [
+								"loevlocene",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"v1",
+								"puj",
+								"allinone",
+								"addUserProfile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-all-user-profile",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://loevlocene.execute-api.us-east-1.amazonaws.com/dev/v1/puj/allinone/getAllUserProfile",
+							"protocol": "https",
+							"host": [
+								"loevlocene",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"v1",
+								"puj",
+								"allinone",
+								"getAllUserProfile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-user-profile",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://loevlocene.execute-api.us-east-1.amazonaws.com/dev/v1/puj/allinone/getUserProfile/jcoronado1",
+							"protocol": "https",
+							"host": [
+								"loevlocene",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"v1",
+								"puj",
+								"allinone",
+								"getUserProfile",
+								"jcoronado1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "remove-user-profile",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"jcoronado1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://loevlocene.execute-api.us-east-1.amazonaws.com/dev/v1/puj/allinone/removeUserProfile",
+							"protocol": "https",
+							"host": [
+								"loevlocene",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"v1",
+								"puj",
+								"allinone",
+								"removeUserProfile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-user-profile",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"jcoronado1\",\r\n    \"email\": \"jcoronadojaveriana@cali.edu.co\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://loevlocene.execute-api.us-east-1.amazonaws.com/dev/v1/puj/allinone/updateUserProfile",
+							"protocol": "https",
+							"host": [
+								"loevlocene",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"v1",
+								"puj",
+								"allinone",
+								"updateUserProfile"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
