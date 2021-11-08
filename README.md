@@ -25,7 +25,7 @@ serverless invoke local --function addUserProfile --aws-profile dev-personal --e
 
 x. delete BD
 
-aws rds delete-db-instance --db-instance-identifier pujlab-1 --profile dev-personal --skip-final-snapshot
+aws rds delete-db-instance --db-instance-identifier pujlab-database-1 --profile dev-personal --skip-final-snapshot
 
 x1. remove serverless stack
 serverless remove --aws-profile dev-personal --envrt dev
